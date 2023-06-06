@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 app.use(
   cors({
-    origin: "https://blog-app-himanshu.netlify.app",
+    origin: "https://localhost:3000",
     credentials: true,
   })
 );
