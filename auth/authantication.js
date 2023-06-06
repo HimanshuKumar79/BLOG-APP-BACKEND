@@ -68,7 +68,7 @@ exports.login = async (req, res) => {
         expires: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
         httpOnly: true, 
         secure: true, 
-        sameSite: "None" 
+//         sameSite: "None" 
       };
       const token = jwt.sign(payload, process.env.SECRET_KEY);
       res
