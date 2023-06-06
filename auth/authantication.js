@@ -65,7 +65,7 @@ exports.login = async (req, res) => {
         id: validUser._id,
       };
       const options = {
-        expires: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
+        maxAge: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
       };
       const token = jwt.sign(payload, process.env.SECRET_KEY);
       res
