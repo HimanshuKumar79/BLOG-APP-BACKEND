@@ -1,0 +1,14 @@
+const express = require("express");
+const app = express();
+const cookieParser = require("cookie-parser");
+const connectDB = require("./config/connectDB");
+const routes = require("./routes/route");
+const PORT = process.env.PORT || 3000;
+require("dotenv").config();
+app.use(express.json());
+app.use(cookieParser());
+app.use("", routes);
+app.listen(PORT, () => {
+  console.log("Server listening on PORT ", PORT);
+});
+connectDB();
