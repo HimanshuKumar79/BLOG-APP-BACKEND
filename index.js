@@ -6,11 +6,8 @@ const routes = require("./routes/route");
 const cors=require("cors")
 const PORT = process.env.PORT || 3000;
 require("dotenv").config();
-app.use(cors({credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    origin: ['http://localhost:3000']}));
-
+app.use(cors({origin: ['http://localhost:3000']}));
+// allowedHeaders: ['Content-Type', 'Authorization'],
 app.use(cookieParser());
 app.use(express.json());
 app.use("", routes);
