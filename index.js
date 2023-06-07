@@ -6,8 +6,8 @@ const routes = require("./routes/route");
 const cors=require("cors")
 const PORT = process.env.PORT || 3000;
 require("dotenv").config();
-app.use(cors({allowHeaders:"*",origin:"*"}));
-// allowHeaders:"*",allowMethods:"*",
+app.use(cors({allowHeaders:"*",allowMethods:"*"}));
+// origin:"*",
 // origin:"https://blog-app-himanshu.netlify.app",credentials: true,
 app.use(cookieParser());
 app.use(express.json());
