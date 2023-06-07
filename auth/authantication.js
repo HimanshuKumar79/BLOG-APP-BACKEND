@@ -73,7 +73,7 @@ exports.login = async (req, res) => {
       };
       const token = jwt.sign(payload, process.env.SECRET_KEY);
       res
-        .cookie("token", token )
+        .cookie("token", JSON.stringify(token),options )
         .status(200)
         .json({
           success: true,
