@@ -66,7 +66,6 @@ exports.login = async (req, res) => {
       };
       const options = {
         maxAge: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
-        domain:"https://localhost:3000",
         httpOnly: true,
         secure: true,
         sameSite:'none',
