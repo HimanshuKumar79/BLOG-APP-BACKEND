@@ -65,8 +65,8 @@ exports.login = async (req, res) => {
         id: validUser._id,
       };
       const options = {
-        expires: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
-        httpOnly: true
+        maxAge: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
+        httpOnly: true,
         domain: 'localhost:3000',
         secure: true,
         sameSite:'none',
