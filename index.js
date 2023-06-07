@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 app.use(cors({credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     origin: ['http://localhost:3000']}));
 
 app.use(cookieParser());
