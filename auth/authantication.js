@@ -68,8 +68,8 @@ exports.login = async (req, res) => {
         maxAge: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
 //         httpOnly: true,
 //         path:'/',
-        secure: true,
-        sameSite:'none',
+//         secure: true,
+//         sameSite:'none',
       };
       const token = jwt.sign(payload, process.env.SECRET_KEY);
       res
