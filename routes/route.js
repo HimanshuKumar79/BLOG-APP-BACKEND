@@ -12,7 +12,7 @@ route.get("/getBlogs", getBlogs);
 route.get("/getSingleBlog/:id", getSingleBlog);
 route.post("/createBlog", createBlog);
 route.put("/updateBlog/:id", updateBlog);
-route.delete("/deleteBlog/:id", deleteBlog);
+route.delete("/deleteBlogbyID/:id", deleteBlog);
 route.delete("/deleteUser", deleteUser);
 route.post("/register", register);
 route.post("/login", login);
